@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: platform-pilot
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: platform-pilot
+
+  template:
+    metadata:
+      labels:
+        app: platform-pilot
+
+    spec:
+      containers:
+      - name: backend
+        image: platform-pilot-backend:v1
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 8080
