@@ -10,7 +10,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 
 func version(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "v1")
+	fmt.Fprintf(w, "v2")
 }
 
 func health(w http.ResponseWriter, r *http.Request) {
